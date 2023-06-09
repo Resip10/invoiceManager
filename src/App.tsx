@@ -1,29 +1,29 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.scss'
+import { ConfigProvider, Layout } from 'antd'
+import { Outlet } from 'react-router-dom'
+import Header from './shared/components/Header/Header'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.tsx</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigProvider
+      theme={{
+        components: {
+          Layout: {
+            colorBgHeader: '#232328',
+          },
+        },
+      }}
+    >
+      <div className="App">
+        <Layout className="App__layout">
+          <Header />
+          <Layout.Content className="App__content">
+            <Outlet />
+          </Layout.Content>
+        </Layout>
+      </div>
+    </ConfigProvider>
   )
 }
 

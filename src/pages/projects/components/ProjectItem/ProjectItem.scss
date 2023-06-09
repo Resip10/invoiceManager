@@ -1,0 +1,17 @@
+.ProjectItem {
+  cursor: pointer;
+  padding: 12px 6px !important; // Important to override framework styles
+
+  &:hover {
+    background: rgb(255, 101, 101);
+    * {
+      color: white !important; // Important to override framework styles
+    }
+  }
+
+  &__action {
+    &-alert {
+      color: red;
+    }
+  }
+}

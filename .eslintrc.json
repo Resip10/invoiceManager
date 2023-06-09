@@ -40,6 +40,11 @@
             "ts": "never",
             "tsx": "never"
           }
+        ],
+        "import/no-extraneous-dependencies": 0,
+        "padding-line-between-statements": [
+          "error",
+          { "blankLine": "always", "prev": "*", "next": "return" }
         ]
       }
     }
