@@ -25,7 +25,7 @@
 - Add support for caching API callback results. Some libraries (like React Query) make it possible
 
 ## Notes:
-- This application has no interactivity. So it's possible to use SCR with its pros. It's possible to implement with Next.js
+- This application has no interactivity. So it's possible to use SSR with its pros. It's possible to implement with Next.js
 
 ## Getting Started
 
