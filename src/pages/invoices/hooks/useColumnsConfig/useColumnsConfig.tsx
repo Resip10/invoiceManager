@@ -1,5 +1,6 @@
 import React from 'react'
 import { ColumnsType } from 'antd/es/table'
+import { Link } from 'react-router-dom'
 import { IInvoice } from '../../../../shared/types/IInvoice'
 
 export default function useColumnsConfig(projectId: string): ColumnsType<IInvoice> {
@@ -35,9 +36,9 @@ export default function useColumnsConfig(projectId: string): ColumnsType<IInvoic
       title: 'Action',
       key: 'action',
       render: (_, record) => (
-        <a href={`/projects/${projectId}/invoices/${record.id}`}>
+        <Link relative="path" to={`./${record.id}`}>
           Open invoice
-        </a>
+        </Link>
       ),
     },
   ], [projectId])

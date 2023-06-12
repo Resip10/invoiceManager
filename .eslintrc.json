@@ -43,6 +43,8 @@
         ],
         "import/no-extraneous-dependencies": 0,
         "import/prefer-default-export": "off",
+        "react/require-default-props": 0,
+        "react/no-unstable-nested-components": "off",
         "padding-line-between-statements": [
           "error",
           { "blankLine": "always", "prev": "*", "next": "return" }

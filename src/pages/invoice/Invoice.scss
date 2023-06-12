@@ -1,0 +1,9 @@
+.Invoice {
+  &__dueDate {
+    padding: 10px 0;
+
+    &-expired {
+      color: red;
+    }
+  }
+}
