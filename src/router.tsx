@@ -5,6 +5,7 @@ import Projects from './pages/projects/Projects'
 import { loader as ProjectsLoader } from './pages/projects/loader'
 import { loader as InvoicesLoader } from './pages/invoices/loader'
 import Invoices from './pages/invoices/Invoices'
+import Invoice from './pages/invoice/Invoice'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
         path: '/projects/:id/invoices',
         loader: InvoicesLoader,
         element: <Invoices />,
+      },
+      {
+        path: '/projects/:id/invoices/:invoiceId',
+        // loader: InvoicesLoader,
+        element: <Invoice />,
       },
     ],
   },

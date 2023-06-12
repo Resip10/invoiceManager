@@ -2,12 +2,12 @@ import React from 'react'
 import { useLoaderData } from 'react-router-dom'
 import { Table } from 'antd'
 import { InvoicesLoader } from './loader'
+import useColumnsConfig from './hooks/useColumnsConfig/useColumnsConfig'
 import './Invoices.scss'
-import { getColumnsConfig } from './helpers'
 
 export default function Invoices() {
-  const { invoices } = useLoaderData() as InvoicesLoader
-  const columns = getColumnsConfig()
+  const { invoices, project } = useLoaderData() as InvoicesLoader
+  const columns = useColumnsConfig(project.id)
 
   return (
     <div className="Invoices">
