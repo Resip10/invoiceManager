@@ -7,3 +7,11 @@
     }
   }
 }
+
+@media print {
+  .Invoice {
+    &__print {
+      display: none !important;
+    }
+  }
+}
