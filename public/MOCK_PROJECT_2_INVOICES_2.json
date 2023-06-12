@@ -1,0 +1,19 @@
+{
+  "project_metadata": {
+    "id": 2,
+    "name": "California Resources Corporation"
+  },
+  "invoice_metadata": {
+    "id": 1,
+    "price": 681.78,
+    "discount": 38,
+    "dueDate": "07-21-2023"
+  },
+  "items": [
+    { "id": 1, "name": "Capital Goods", "hours": 13, "rate": 24.5, "taxes": 12 },
+    { "id": 2, "name": "Transportation", "hours": 2, "rate": 12, "taxes": 3 },
+    { "id": 3, "name": "Health Care", "hours": 2, "rate": 3.5, "taxes": 0 },
+    { "id": 4, "name": "Consumer Services", "hours": 3.5, "rate": 10, "taxes": 12 },
+    { "id": 5, "name": "Technology", "hours": 24, "rate": 25, "taxes": 12 }
+  ]
+}

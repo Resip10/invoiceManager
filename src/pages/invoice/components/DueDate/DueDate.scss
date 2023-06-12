@@ -1,0 +1,7 @@
+.DueDate {
+  padding: 10px 0;
+
+  * + * {
+    margin-left: 8px;
+  }
+}

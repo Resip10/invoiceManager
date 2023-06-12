@@ -7,7 +7,7 @@ export type InvoicesLoader = {
   project: Pick<IProject, 'id' | 'name'>
 }
 export async function loader({ params }: LoaderFunctionArgs): Promise<InvoicesLoader> {
-  const data = await fetch(`MOCK_PROJECT_${params.id}_INVOICES.json`)
+  const data = await fetch(`/MOCK_PROJECT_${params.id}_INVOICES.json`)
   const { invoices, project_metadata: project } = await data.json()
 
   return { invoices, project }

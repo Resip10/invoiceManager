@@ -1,0 +1,15 @@
+{
+  "project_metadata": {
+    "id": 2,
+    "name": "California Resources Corporation"
+  },
+  "invoice_metadata": {
+    "id": 1,
+    "price": 199.76,
+    "discount": 44,
+    "dueDate": "08-05-2023"
+  },
+  "items": [
+    { "id": 1, "name": "Capital Goods", "hours": 13, "rate": 24.5, "taxes": 12 }
+  ]
+}

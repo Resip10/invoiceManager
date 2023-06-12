@@ -14,21 +14,21 @@
     {
       "id": 2,
       "items": 2,
-      "price": 2886.52,
+      "price": 694.56,
       "discount": 50,
       "dueDate": "06-07-2022"
     },
     {
       "id": 3,
       "items": 1,
-      "price": 2376.74,
+      "price": 130.71,
       "discount": 40,
       "dueDate": "11-26-2023"
     },
     {
       "id": 4,
       "items": 2,
-      "price": 705.29,
+      "price": 107.22,
       "discount": 14,
       "dueDate": "09-14-2023"
     }

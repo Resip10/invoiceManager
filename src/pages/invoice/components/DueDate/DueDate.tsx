@@ -1,6 +1,7 @@
 import React from 'react'
-import { Card, Typography } from 'antd'
+import { Tag, Typography } from 'antd'
 import { IInvoice } from '../../../../shared/types/IInvoice'
+import './DueDate.scss'
 
 interface IDueDateProps {
   dueDate: IInvoice['dueDate']
@@ -10,7 +11,7 @@ export default React.memo((props: IDueDateProps) => {
   const isExpired = new Date(props.dueDate) < new Date()
 
   return (
-    <>
+    <div className="DueDate">
       <Typography.Text
         type={isExpired ? 'danger' : 'success'}
         className={`Invoice__dueDate${
@@ -19,7 +20,7 @@ export default React.memo((props: IDueDateProps) => {
       >
         {props.dueDate}
       </Typography.Text>
-      {isExpired ? <Card color="red">Expired</Card> : null}
-    </>
+      {isExpired ? <Tag color="red">Expired</Tag> : null}
+    </div>
   )
 })

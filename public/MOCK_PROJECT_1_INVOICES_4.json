@@ -1,0 +1,16 @@
+{
+  "project_metadata": {
+    "id": 1,
+    "name": "Pro-Dex, Inc."
+  },
+  "invoice_metadata": {
+    "id": 4,
+    "price": 107.22,
+    "discount": 14,
+    "dueDate": "09-14-2023"
+  },
+  "items": [
+    { "id": 1, "name": "Finance", "hours": 21, "rate": 4, "taxes": 12 },
+    { "id": 2, "name": "Energy", "hours": 11, "rate": 2.7, "taxes": 3 }
+  ]
+}
