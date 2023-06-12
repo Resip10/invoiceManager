@@ -21,11 +21,12 @@
 - Cover components/services/helpers by unit tests
 - Move all "magic" strings and variables under shared constants
 - Add lazy loaders and skeletons for better UX, as real data fetching may take some time
+- Add infinite scrolling with virtualized list for the list of projects. (Real data is much bigger, so it's not a good decision to load all data in one request and render a full list)
 - Add i18n for text and currencies
 - Add support for caching API callback results. Some libraries (like React Query) make it possible
 
 ## Notes:
-- This application has no interactivity. So it's possible to use SSR with its pros. It's possible to implement with Next.js
+- This application has no interactivity. So it's better to use SSR with its pros. It's possible to implement with Next.js
 
 ## Getting Started
 
