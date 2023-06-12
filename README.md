@@ -17,6 +17,16 @@
 - I can see the invoice subtotal and total price
 - I can print the invoice
 
+## TODO:
+- Cover components/services/helpers by unit tests
+- Move all "magic" strings and variables under shared constants
+- Add lazy loaders and skeletons for better UX, as real data fetching may take some time
+- Add i18n for text and currencies
+- Add support for caching API callback results. Some libraries (like React Query) make it possible
+
+## Notes:
+- This application has no interactivity. So it's possible to use SCR with its pros. It's possible to implement with Next.js
+
 ## Getting Started
 
 #### `yarn start`
