@@ -1,35 +1,29 @@
 import React from 'react'
-import { List, Space } from 'antd'
-import { ClockCircleOutlined, FileTextOutlined } from '@ant-design/icons'
+import { Link } from 'react-router-dom'
+import { Divider, List } from 'antd'
 import { IProject } from '../../../../shared/types/IProject'
 import './ProjectItem.scss'
+import useProjectIcons from '../../hooks/useProjectIcons/useProjectIcons'
 
 interface IProjectItem {
   project: IProject
 }
 export default function ProjectItem(props: IProjectItem) {
   const { project } = props
-  const actions = React.useMemo(() => [
-    <Space key="invoices-data" className="ProjectItem__action" title="Invoices">
-      <FileTextOutlined />
-      {project.invoices}
-    </Space>,
-  ].concat(project.expired ? (
-    <Space key="expired-data" className="ProjectItem__action ProjectItem__action-alert" title="Expired invoices">
-      <ClockCircleOutlined />
-      {project.expired}
-    </Space>
-  ) : []), [project.expired, project.invoices])
+  const icons = useProjectIcons(project)
 
   return (
-    <List.Item
-      className="ProjectItem"
-      actions={actions}
-    >
-      <List.Item.Meta
-        title={project.name}
-        description={project.description}
-      />
-    </List.Item>
+    <Link relative="path" to={`./${project.id}/invoices`} className="ProjectItem">
+      <List.Item
+        className="ProjectItem__item"
+        actions={icons}
+      >
+        <List.Item.Meta
+          title={project.name}
+          description={project.description}
+        />
+      </List.Item>
+      <Divider className="ProjectItem__divider" />
+    </Link>
   )
 }

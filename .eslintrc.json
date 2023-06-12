@@ -42,6 +42,7 @@
           }
         ],
         "import/no-extraneous-dependencies": 0,
+        "import/prefer-default-export": "off",
         "padding-line-between-statements": [
           "error",
           { "blankLine": "always", "prev": "*", "next": "return" }

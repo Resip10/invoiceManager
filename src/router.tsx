@@ -1,25 +1,32 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom'
 import React from 'react'
 import App from './App'
-import ErrorPage from './pages/errorPage/ErrorPage'
 import Projects from './pages/projects/Projects'
 import { loader as ProjectsLoader } from './pages/projects/loader'
+import { loader as InvoicesLoader } from './pages/invoices/loader'
+import Invoices from './pages/invoices/Invoices'
 
 const router = createBrowserRouter([
   {
-    errorElement: <ErrorPage />,
+    errorElement: <Navigate to="/" />,
     element: <App />,
     children: [
       {
+        index: true,
         path: '/projects',
         loader: ProjectsLoader,
         element: <Projects />,
       },
       {
-        path: '/*',
-        element: <Navigate to="/projects" />,
+        path: '/projects/:id/invoices',
+        loader: InvoicesLoader,
+        element: <Invoices />,
       },
     ],
+  },
+  {
+    path: '/*',
+    element: <Navigate to="/projects" />,
   },
 ])
 

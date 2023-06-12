@@ -1,17 +1,28 @@
 .ProjectItem {
   cursor: pointer;
-  padding: 12px 6px !important; // Important to override framework styles
 
-  &:hover {
-    background: rgb(255, 101, 101);
-    * {
-      color: white !important; // Important to override framework styles
-    }
+  &__divider {
+    margin: 0;
+  }
+
+  &__item {
+    padding: 12px 6px !important; // Important to override framework styles
   }
 
   &__action {
     &-alert {
       color: red;
+    }
+  }
+
+  &:hover {
+
+    .ProjectItem__item {
+      background: rgb(255, 101, 101);
+
+      * {
+        color: white !important; // Important to override framework styles
+      }
     }
   }
 }
